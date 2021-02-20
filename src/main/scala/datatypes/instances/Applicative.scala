@@ -4,7 +4,6 @@ import datatypes.Identity
 import typeclasses.{Applicative, Functor}
 
 given (using functor: Functor[Identity]): Applicative[Identity] with
-
   export functor._
 
   def pure[A](a: A): Identity[A] = Identity(a)
